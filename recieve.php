@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $newData = "\n$inputData\n---------------------------------------\n";
 
     // Define the file where data will be saved
-    $file = "البيانات.txt";
+    $file = "storm.txt";
 
     // Read the existing content of the file (if it exists)
     $oldData = file_exists($file) ? file_get_contents($file) : '';
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Write the updated content back to the file
     if (file_put_contents($file, $updatedData)) {
-        echo "تم الارسال";
+        echo "Sent !";
     } else {
         echo "Error saving data.";
     }
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ارسل النص</title>
+    <title>Sent</title>
 </head>
 <body style="text-align: center;">
     
